@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<!-- saved from url=(0253)https://64f7b837-f7c8-4a69-9990-947fd9880a48.frame.claudeusercontent.com/_f/1786460915-e0fe/?__frame_t=SlUKFW3ZMYaX6ebvpfdU8Y7j.7c8870c3-a732-487d-85ba-d0f5c88f6fd1.c3ab956a-87c6-4a7e-b8ad-8da52464abc8.1787319414&__frame_v=manifest.cedd5fcdd733d664.json -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- frame-runtime --><!--<base href="/_f/1786460915-e0fe/">--><base href="."><script>window.__FRAME_PREAMBLE={"capabilities":{"artifact":"artifact.CPjnkS1k.js","assets":"assets.BkxVItX2.js","comments":"comments.GLuHR3zP.js","db":"db.CRhVHzSt.js","downloads":"downloads.C3GSvEDP.js","embed":"embed.qSh8AS5_.js","mcp":"mcp.D3B2EyQu.js","permissions":"permissions.BNySkLV5.js","room":"room.BgXZkiYR.js","sample":"sample.C7z_6W62.js","self":"artifact.CPjnkS1k.js","user":"user.BpKav-Rf.js"},"transforms":"_transforms.h3_8GSUa.js","comments":"_comments.kok9hxlq.js","translate":"_translate.5HCW4BJh.js"}</script><script>(function(){"use strict";var Y=["light","dark","system"],X=/^[A-Za-z0-9_-]{1,64}$/,x=/^[a-zA-Z_:][a-zA-Z0-9_:.-]{0,127}$/,G=new Set(["class","hidden","value","checked"]);function V(e){const t=e.toLowerCase();return t.startsWith("data-")||t.startsWith("aria-")||G.has(t)}var Z="http://www.w3.org/1999/xhtml",J="http://www.w3.org/2000/svg",Q=new Set(["script","style","iframe","noscript","noframes","noembed","xmp","plaintext","template","title","textarea","object","embed"]),ee=new Set(["script","style"]);function te(e){const t=e.localName.toLowerCase();return e.namespaceURI===Z?!Q.has(t):e.namespaceURI===J?!ee.has(t):!1}function re(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_patch;if(t===null||typeof t!="object")return!1;const{seq:n,elements:a}=t;if(typeof n!="number"||!Number.isSafeInteger(n)||!Array.isArray(a)||a.length===0||a.length>64)return!1;for(const l of a){if(l===null||typeof l!="object")return!1;const s=l;if(typeof s.target!="string"||!X.test(s.target)||s.text!==void 0&&typeof s.text!="string")return!1;if(s.attrsSet!==void 0){if(s.attrsSet===null||typeof s.attrsSet!="object")return!1;for(const[c,u]of Object.entries(s.attrsSet))if(!x.test(c)||typeof u!="string")return!1}if(s.attrsRemoved!==void 0){if(!Array.isArray(s.attrsRemoved))return!1;for(const c of s.attrsRemoved)if(typeof c!="string"||!x.test(c))return!1}}return!0}function ne(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_init;return t!==null&&typeof t=="object"}function se(e){return e!==null&&typeof e=="object"&&e.__frame_size_poke===!0}function ae(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_theme;if(t===null||typeof t!="object")return!1;const n=t.theme;return typeof n=="string"&&Y.includes(n)}var j="__frame_scroll",oe=150,ie=310,le=160,ce=3e4;function ue(){let e=0,t=!1,n=!1,a=!1,l=0,s=null;const c=i=>{try{sessionStorage.setItem(j,JSON.stringify({y:i}))}catch{}},u=()=>{if(clearTimeout(e),s===null)return;const i=s;s=null,c(i)},S=()=>{if(t){t=!1;return}n=!0,s=scrollY,clearTimeout(e),e=setTimeout(u,oe)};try{addEventListener("scroll",S,{passive:!0}),addEventListener("pagehide",u)}catch{}const v=()=>{let i;try{i=sessionStorage.getItem(j)}catch{return null}if(i===null)return null;let d;try{d=JSON.parse(i)}catch{d=null}const f=d?.y;if(!(typeof f=="number"&&Number.isFinite(f)&&f>=0)){try{sessionStorage.removeItem(j)}catch{}return null}return f};let w=!1;const m=i=>{try{const d=scrollY;scrollTo({top:i,left:0,behavior:"instant"}),l=i,a=!0,clearTimeout(e),s=null,c(i);const f=scrollY;f!==d&&(t=!0),f!==i&&!w&&(w=!0,addEventListener("load",()=>{try{if(scrollY===f){const _=v();m(_!==null?_:l)}}catch{}},{once:!0}))}catch{}},y=()=>{try{return!!location.hash}catch{return!0}};let g=!1;const E=()=>{try{if(g||innerWidth>ie||innerHeight>le)return;g=!0;const i=Date.now(),d=()=>{try{removeEventListener("resize",d)}catch{}if(Date.now()-i>ce||n||y())return;const f=v();m(f!==null?f:l)};addEventListener("resize",d)}catch{}};let r=!1,p=!1;return{restore(){if(r||(r=!0,y()))return;const i=v();i!==null&&(m(i),E())},promoted(){if(p||(p=!0,y()))return;const i=v();i!==null?(m(i),E()):a&&m(l)}}}var ye="modulepreload",ge=function(e){return"/"+e},be={},fe=function(t,n,a){let l=Promise.resolve();function s(c){const u=new Event("vite:preloadError",{cancelable:!0});if(u.payload=c,window.dispatchEvent(u),!u.defaultPrevented)throw c}return l.then(c=>{for(const u of c||[])u.status==="rejected"&&s(u.reason);return t().catch(s)})};(function(){const e=Object.defineProperty,t=globalThis,n=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let a=0;for(let l=0;l<n.length;l++){const s=n[l];try{e(t,s,{value:void 0,writable:!1,configurable:!1})}catch{try{delete t[s]}catch{}try{e(t,s,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof t[s]=="function"&&a++}if(a&&window!==top)try{parent.postMessage({__frame_rtc_lockdown_failed:a},"*")}catch{}})();var pe=1e4,de=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]);function D(e){for(const t of de)if(t.endsWith(":*"))try{const n=new URL(e);if(`${n.protocol}//${n.hostname}:*`===t)return!0}catch{}else if(e===t)return!0;return!1}var M=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities}),O=window.__FRAME_PREAMBLE?.transforms,N=window.__FRAME_PREAMBLE?.comments,B=window.__FRAME_PREAMBLE?.translate,L=/^[\w.-]+\.js$/;function T(e){return fe(()=>import("/_runtime/"+e),void 0)}function z(e,t){return{contract:e.contract,changes:new Set(e.changes??[]),flags:new Set(e.flags??[]),capabilities:e.capabilities??{},capBudgets:e.capBudgets??{},transforms:new Map,shellOrigin:t,mount:W,pipe:()=>({wrap:(n,a)=>(...l)=>{try{return a(...l)}catch(s){return Promise.reject(s)}}})}}var P=null,b=null;function q(e,t,n){try{Object.defineProperty(e,t,{value:n,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(e,t,{value:n,writable:!1,configurable:!0,enumerable:!0})}catch{}}}var I=!1;function me(e,t){const n=[];for(const a of e.elements){const l=document.querySelector(`[data-id="${a.target}"]`);if(!l){parent.postMessage({__frame_patch_miss:{seq:e.seq}},t);return}if([...Object.keys(a.attrsSet??{}),...a.attrsRemoved??[]].some(s=>!V(s))){parent.postMessage({__frame_patch_miss:{seq:e.seq}},t);return}if(a.text!==void 0&&!te(l)){parent.postMessage({__frame_patch_miss:{seq:e.seq}},t);return}for(const[s,c]of Object.entries(a.attrsSet??{}))if(!$(l,s)){try{l.setAttribute(s,c)}catch{}H(l,s,c)}for(const s of a.attrsRemoved??[])$(l,s)||(l.removeAttribute(s),H(l,s,null));typeof a.text=="string"&&(l.textContent=a.text),n.push(a.target)}try{document.dispatchEvent(new CustomEvent("claude:edit",{detail:{seq:e.seq,targets:n}}))}catch{}}function H(e,t,n){if(!(e instanceof HTMLInputElement))return;const a=t.toLowerCase();a==="checked"?e.checked=n!==null:a==="value"&&e.type!=="file"&&(e.value=n??"")}function $(e,t){const n=t.toLowerCase(),a=e;return n==="data-id"||(n==="value"||n==="checked")&&(a.__artifactSecret===!0||/^(password|hidden|file)$/.test(a.type??"")||/(^|\s)(cc-|one-time-code|current-password|new-password)/i.test(`${e.getAttribute("autocomplete")??""} ${a.autocomplete??""}`))}function K(e){const t=document.documentElement;e==="light"||e==="dark"?(t.dataset.theme=e,t.style.colorScheme=e,I=!0):I&&(delete t.dataset.theme,t.style.colorScheme="",I=!1)}var R=new Map;function _e(){let e;const t={u:new Promise(n=>{e=n}),r:n=>{t.done=!0,e(n)},done:!1,nulled:!1};return t}var he=Object.freeze(Object.assign(Object.create(null),{call:Function.prototype.call,apply:Function.prototype.apply,bind:Function.prototype.bind})),W=(e,t)=>{const n=R.get(e);if(!n||n.done){n?.nulled&&b&&parent.postMessage({__frame_cap_telemetry:{kind:"cap-load-error",cap:e}},b);return}const a=typeof t=="function"?Object.setPrototypeOf(t,he):Object.assign(Object.create(null),t);typeof a.then=="function"&&delete a.then,n.r(Object.freeze(a))},U=Object.getOwnPropertyDescriptor(window,"claude");if(window!==top&&!(U&&U.writable===!1)){const e=O&&L.test(O)?T(O).catch(()=>{}):Promise.resolve(void 0),t=r=>{if(r.type==="auxclick"&&r.button!==1)return;const p=r.target,i=p&&p.closest?p.closest("a[href],area[href]"):null;if(!i)return;const d=i.getAttribute("href");if(!d)return;let f,_;try{f=new URL(d,document.baseURI),_=new URL(document.baseURI).origin}catch{return}if((f.protocol==="http:"||f.protocol==="https:")&&f.origin!==_){r.preventDefault();const h=(i.getAttribute("target")??"").toLowerCase(),C=r.type==="auxclick"||r.metaKey||r.ctrlKey||r.shiftKey||r.altKey||!["","_self","_top","_parent"].includes(h);parent.postMessage({__frame_nav:!0,url:f.href,newTab:C},"*")}};addEventListener("click",t,!0),addEventListener("auxclick",t,!0);const n={},a=r=>{r.isTrusted&&(n.pointer=!0)},l=r=>{r.isTrusted&&(n.click=!0)};addEventListener("pointermove",a,{capture:!0,passive:!0}),addEventListener("click",l,{capture:!0,passive:!0}),e.then(r=>{r?.wireNav&&(r.wireNav(),removeEventListener("click",t,!0),removeEventListener("auxclick",t,!0),removeEventListener("pointermove",a,!0),removeEventListener("click",l,!0),r.wireEngagement?.(n))});let s=null;try{s=ue()}catch{}const c=U?.value??{};q(window,"claude",c);for(const r of Object.keys(M)){if(c[r]!==void 0){q(c,r,c[r]);continue}R.set(r,_e())}if(c.use===void 0){const r=p=>{if(typeof p!="string"||!Object.hasOwn(M,p))return Promise.resolve(null);const i=R.get(p);return i?i.u:Promise.resolve(c[p]??null)};try{Object.defineProperty(c,"use",{value:r,writable:!0,configurable:!0,enumerable:!1})}catch{}}let u=null,S=null,v=0;const w=r=>{r.source!==parent||!D(r.origin)||ne(r.data)&&(u=r.data.__frame_init,b=r.origin,removeEventListener("message",w),clearTimeout(v),S?.())};addEventListener("message",w),parent.postMessage({__frame_connect:!0},"*");const m=new Promise(r=>{S=r,v=setTimeout(()=>{removeEventListener("message",w),r()},pe)}),y=document.readyState==="loading"?new Promise(r=>document.addEventListener("DOMContentLoaded",()=>r(),{once:!0})):Promise.resolve();y.then(()=>{try{s?.restore()}catch{}});const g={cb:null},E=r=>{if(!(r.source!==parent||!D(r.origin))&&se(r.data)){try{s?.promoted()}catch{}g.cb?.()}};addEventListener("message",E),m.then(async()=>{if(!u||!b){for(const o of R.values())o.nulled=!0,o.r(null);return}K(u.theme);const r=b;let p=!1,i=!1;addEventListener("message",o=>{if(o.source!==parent||o.origin!==r)return;ae(o.data)&&K(o.data.__frame_theme.theme),re(o.data)&&me(o.data.__frame_patch,r);const k=o.data?.__fc_mode;k&&typeof k=="object"&&!p&&N&&L.test(N)&&(p=!0,T(N).then(F=>F.install?.(r,k.on===!0)).catch(()=>{}));const A=o.data?.__ft_cmd;A&&typeof A=="object"&&!i&&B&&L.test(B)&&(i=!0,T(B).then(F=>F.install?.(r,A)).catch(()=>{}))});const d=Object.keys(u.capabilities??{}).filter(o=>Object.hasOwn(M,o)).map(o=>[o,M[o]]).filter(o=>typeof o[1]=="string"&&L.test(o[1])),f=await Promise.allSettled(d.map(([,o])=>T(o))),_=await e,h=b;if(_?.buildBoot||parent.postMessage({__frame_cap_telemetry:{kind:"cap-load-error",cap:"_transforms"}},h),_?.buildBoot)try{P=_.buildBoot(u,_.TRANSFORMS??{},{shellOrigin:h,mount:W},o=>parent.postMessage({__frame_cap_telemetry:o},h))}catch{parent.postMessage({__frame_cap_telemetry:{kind:"cap-load-error",cap:"_transforms"}},h),P=z(u,h)}else P=z(u,h);const C=o=>parent.postMessage({__frame_cap_telemetry:{kind:"cap-load-error",cap:o}},h),ve=P;f.forEach((o,k)=>{const A=d[k][0];if(o.status!=="fulfilled"){C(A);return}try{o.value?.install?.(ve)}catch{C(A)}});for(const o of R.values())o.done||(o.nulled=!0,o.r(null));await y,parent.postMessage({__frame_ready:!0},b),e.then(o=>o?.installSizeReporter?.(h,g))})}})();</script><!-- /frame-runtime --><meta name="viewport" content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style></head><body>
+<style>
+  :root {
+    --bg: #eef1ef;
+    --surface: #ffffff;
+    --surface-alt: #e3e8e5;
+    --ink: #172420;
+    --ink-muted: #5c6b64;
+    --line: #ccd5d0;
+    --accent: #0c6b5e;
+    --accent-soft: #d2ece5;
+    --fragment: #8a8172;
+    --fragment-soft: #ece7dc;
+    --shadow: 0 1px 2px rgba(23,36,32,0.06), 0 2px 10px rgba(23,36,32,0.05);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101614;
+      --surface: #171f1c;
+      --surface-alt: #1c2521;
+      --ink: #e6ece9;
+      --ink-muted: #93a39c;
+      --line: #2a3530;
+      --accent: #2bb5a0;
+      --accent-soft: #163a34;
+      --fragment: #a39a8a;
+      --fragment-soft: #242019;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 2px 12px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #101614;
+    --surface: #171f1c;
+    --surface-alt: #1c2521;
+    --ink: #e6ece9;
+    --ink-muted: #93a39c;
+    --line: #2a3530;
+    --accent: #2bb5a0;
+    --accent-soft: #163a34;
+    --fragment: #a39a8a;
+    --fragment-soft: #242019;
+  }
+  :root[data-theme="light"] {
+    --bg: #eef1ef;
+    --surface: #ffffff;
+    --surface-alt: #e3e8e5;
+    --ink: #172420;
+    --ink-muted: #5c6b64;
+    --line: #ccd5d0;
+    --accent: #0c6b5e;
+    --accent-soft: #d2ece5;
+    --fragment: #8a8172;
+    --fragment-soft: #ece7dc;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Charter, "Iowan Old Style", "Georgia", serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .display {
+    font-family: Futura, "Century Gothic", "Avenir Next", "Segoe UI", sans-serif;
+  }
+
+  .mono {
+    font-family: "Cascadia Code", "JetBrains Mono", "Source Code Pro", Consolas, monospace;
+  }
+
+  .page {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+  }
+
+  .prose {
+    max-width: 700px;
+  }
+
+  header.hero {
+    max-width: 700px;
+    margin-bottom: 1.6rem;
+  }
+
+  .eyebrow {
+    font-family: Futura, "Century Gothic", "Avenir Next", sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 0 0 0.9rem;
+    border-top: 1px solid var(--line);
+    padding-top: 0.9rem;
+  }
+
+  h1 {
+    font-family: Futura, "Century Gothic", "Avenir Next", sans-serif;
+    font-weight: 600;
+    font-size: 2.15rem;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 1rem;
+    text-wrap: balance;
+    color: var(--ink);
+  }
+
+  .hero p.lede {
+    font-size: 1.12rem;
+    color: var(--ink-muted);
+    margin: 0;
+  }
+
+  h2 {
+    font-family: Futura, "Century Gothic", "Avenir Next", sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: -0.005em;
+    margin: 0 0 1.1rem;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  section { margin-top: 3.6rem; }
+
+  p { margin: 0 0 1.05rem; }
+  p:last-child { margin-bottom: 0; }
+
+  /* Revision note */
+  .revision-note {
+    background: var(--accent-soft);
+    border-radius: 3px;
+    padding: 1.1rem 1.4rem;
+    max-width: 760px;
+    margin-bottom: 3.2rem;
+  }
+  .revision-note .tag {
+    font-family: Futura, "Century Gothic", "Avenir Next", sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .revision-note ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.15rem;
+    font-size: 0.92rem;
+  }
+  .revision-note li { margin-bottom: 0.4rem; }
+  .revision-note li:last-child { margin-bottom: 0; }
+
+  .stat-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 1.8rem 0 2.2rem;
+    max-width: 900px;
+  }
+
+  .stat {
+    background: var(--surface);
+    padding: 1.1rem 1.3rem;
+  }
+
+  .stat .num {
+    font-family: Futura, "Century Gothic", "Avenir Next", sans-serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+
+  .stat .cap {
+    margin-top: 0.4rem;
+    font-size: 0.82rem;
+    color: var(--ink-muted);
+    font-family: Futura, "Century Gothic", "Avenir Next", sans-serif;
+  }
+
+  .kennzahl-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 1rem 0 0;
+  }
+
+  .kennzahl-tags .tag {
+    font-family: "Cascadia Code", "JetBrains Mono", Consolas, monospace;
+    font-size: 0.78rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 3px;
+    background: var(--fragment-soft);
+    color: var(--fragment);
+    border: 1px solid var(--line);
+  }
+
+  /* Diagram */
+  .diagram-wrap {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    padding: 1.4rem 1.4rem 0.6rem;
+    overflow-x: auto;
+    margin-top: 1.6rem;
+  }
+
+  .diagram-wrap svg { display: block; width: 100%; height: auto; min-width: 720px; }
+  figcaption {
+    max-width: 760px;
+    margin: 0.9rem 0 0;
+    font-size: 0.92rem;
+    color: var(--ink-muted);
+  }
+  figure { margin: 0; }
+
+  .dg-panel-label { font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em; }
+  .dg-file-label { font-size: 11px; fill: var(--ink-muted); }
+  .dg-th { font-size: 10.5px; fill: var(--ink-muted); }
+  .dg-td { font-size: 11.5px; }
+  .dg-title { font-size: 13px; font-weight: 600; }
+  .dg-attr { font-size: 10.5px; }
+  .dg-arrow-label { font-size: 10.5px; }
+  .dg-note { font-size: 11px; font-style: italic; fill: var(--ink-muted); }
+
+  .stroke-ink { stroke: var(--ink); }
+  .fill-ink { fill: var(--ink); }
+  .stroke-muted { stroke: var(--line); }
+  .fill-muted { fill: var(--ink-muted); }
+  .stroke-accent { stroke: var(--accent); }
+  .fill-accent { fill: var(--accent); }
+  .fill-accent-soft { fill: var(--accent-soft); }
+  .stroke-fragment { stroke: var(--fragment); }
+  .fill-fragment { fill: var(--fragment); }
+  .fill-fragment-soft { fill: var(--fragment-soft); }
+  .fill-surface { fill: var(--surface); }
+  .fill-bg { fill: var(--bg); }
+
+  /* Table catalog */
+  .catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1.8rem;
+  }
+
+  .catalog-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    padding: 1.1rem 1.2rem 1.2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .catalog-card::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    width: 34px; height: 34px;
+    background: var(--tab-color, var(--ink-muted));
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+  }
+
+  .catalog-card.core { --tab-color: var(--accent); }
+
+  .catalog-card .role {
+    font-family: Futura, "Century Gothic", "Avenir Next", sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--tab-color, var(--ink-muted));
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .catalog-card .name {
+    font-family: "Cascadia Code", "JetBrains Mono", Consolas, monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.55rem;
+    word-break: break-word;
+  }
+
+  .catalog-card .purpose {
+    font-size: 0.92rem;
+    color: var(--ink-muted);
+    margin-bottom: 0.85rem;
+    line-height: 1.45;
+  }
+
+  .catalog-card .cols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .catalog-card .cols span {
+    font-family: "Cascadia Code", "JetBrains Mono", Consolas, monospace;
+    font-size: 0.72rem;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    color: var(--ink);
+    padding: 0.15rem 0.45rem;
+    border-radius: 3px;
+  }
+
+  /* Callout */
+  .callout {
+    background: var(--surface-alt);
+    border-radius: 3px;
+    padding: 1.4rem 1.6rem;
+    max-width: 780px;
+  }
+
+  .callout h3 {
+    font-family: Futura, "Century Gothic", "Avenir Next", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 0.7rem;
+  }
+
+  .callout ol, .callout ul {
+    margin: 0;
+    padding-left: 1.15rem;
+  }
+  .callout li { margin-bottom: 0.6rem; }
+  .callout li:last-child { margin-bottom: 0; }
+
+  .code-block {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 1.1rem 1.3rem;
+    max-width: 780px;
+    overflow-x: auto;
+    margin: 1.3rem 0;
+  }
+  .code-block pre {
+    margin: 0;
+    font-family: "Cascadia Code", "JetBrains Mono", "Source Code Pro", Consolas, monospace;
+    font-size: 0.86rem;
+    line-height: 1.65;
+    color: var(--ink);
+    white-space: pre;
+  }
+  .code-block .kw { color: var(--accent); font-weight: 600; }
+  .code-block .cm { color: var(--ink-muted); font-style: italic; }
+
+  .steps {
+    max-width: 780px;
+    margin: 1.4rem 0 0;
+    padding-left: 1.15rem;
+    font-size: 0.92rem;
+  }
+  .steps li { margin-bottom: 0.6rem; }
+  .steps li:last-child { margin-bottom: 0; }
+  .steps .mono { color: var(--accent); }
+
+  footer.closing {
+    margin-top: 4rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--line);
+    max-width: 700px;
+    font-size: 0.92rem;
+    color: var(--ink-muted);
+  }
+
+  a { color: var(--accent); }
+
+  @media (max-width: 640px) {
+    .page { padding: 2.5rem 1.2rem 4rem; }
+    h1 { font-size: 1.65rem; }
+    .stat-strip { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="page">
+
+  <header class="hero">
+    <p class="eyebrow">Vorschlag · Datenbankstruktur · überarbeitet</p>
+    <h1>Vom Datei-Archiv zum verknüpften Katalog</h1>
+    <p class="lede">Ein Normalisierungsvorschlag für die nächste Ausbaustufe von Stats_lang.db – damit dasselbe Medium nicht länger in mehreren, unverknüpften Tabellen parallel gepflegt wird.</p>
+  </header>
+
+  <section class="prose">
+    <h2>Der Befund</h2>
+    <p>Die aktuelle Testdatenbank bildet bewusst die 16 Quelldateien 1:1 ab – das war für die reine Übertragungsprüfung richtig. Für den produktiven Einsatz zeigt genau diese Struktur aber, wie zersplittert die Verwaltung historisch gewachsen ist: von 1'020 eindeutigen Medientiteln kommen 137 in mehr als einer der 16 Tabellen vor – mit jeweils eigenen, unabhängig gepflegten Spalten für Verlag, Kommentare und Ansprechpartner.</p>
+
+    <div class="stat-strip">
+      <div class="stat">
+        <div class="num">16 → 9</div>
+        <div class="cap">Tabellen nach Quelldatei vs. nach Bedeutung</div>
+      </div>
+      <div class="stat">
+        <div class="num">137 / 1'020</div>
+        <div class="cap">Titel, die heute in ≥ 2 Tabellen parallel existieren</div>
+      </div>
+      <div class="stat">
+        <div class="num">26 → ~15</div>
+        <div class="cap">Kennzahl-Bezeichnungen vor / nach Vereinheitlichung</div>
+      </div>
+    </div>
+
+    <p>Allein für „Nutzung pro bezahlter Einheit" existieren aktuell sechs verschiedene Schreibweisen, je nachdem, welche Abteilung die Tabelle gepflegt hat:</p>
+    <div class="kennzahl-tags">
+      <span class="tag">CPU</span><span class="tag">CPU CHF</span><span class="tag">CPU O</span>
+      <span class="tag">CPU TIR</span><span class="tag">CPU UIR</span><span class="tag">CPU UTR</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Was das konkret bedeutet: VetCenter</h2>
+    <p class="prose">Die Thieme-Datenbank <strong>VetCenter</strong> taucht in drei völlig verschiedenen Dateien auf – einmal mit Bibliothek „Vetsuisse (B540)", einmal mit „Medizin (B452)", und ein drittes Mal ganz ohne Nutzungszahlen, dafür mit Vertragsdetails. Das ist kein Fehler, sondern zeigt eine echte gemeinsame Lizenz zweier Abteilungen – nur lässt sich das heute nirgends als Zusammenhang abfragen. Genau dafür trennt die überarbeitete Struktur die Bibliotheks-Zuordnung (<span class="mono">objekt_bibliothek</span>) von den jahresgenauen Verwaltungsdaten (<span class="mono">verwaltung</span>).</p>
+
+    <figure>
+      <div class="diagram-wrap">
+        <svg viewBox="0 0 1180 620" role="img" aria-label="Vergleich: heute ist VetCenter als Titel in drei getrennten, unverknüpften Tabellen dupliziert; im Vorschlag wird VetCenter zu einem Datensatz in der Tabelle objekt, verknüpft über zwei objekt_bibliothek-Zeilen (Vetsuisse B540, Medizin B452) mit jahresgenauen Verwaltungsdaten und Notizen.">
+          <defs>
+            <marker id="arrow-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" class="fill-muted"></path>
+            </marker>
+            <marker id="arrow-accent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" class="fill-accent"></path>
+            </marker>
+          </defs>
+
+          <!-- LEFT PANEL: today -->
+          <text x="250" y="34" text-anchor="middle" class="display dg-panel-label fill-fragment">HEUTE — 3 von 16 Tabellen, unverknüpft</text>
+
+          <!-- table 1 -->
+          <text x="40" y="60" class="mono dg-file-label">E-Journals B540 (2024–)</text>
+          <rect x="40" y="66" width="420" height="56" fill="none" class="stroke-muted"></rect>
+          <text x="50" y="82" class="display dg-th">TITEL</text>
+          <text x="230" y="82" class="display dg-th">BIBLIOTHEK</text>
+          <text x="340" y="82" class="display dg-th">NOTIZEN</text>
+          <line x1="40" y1="88" x2="460" y2="88" class="stroke-muted"></line>
+          <rect x="40" y="88" width="420" height="34" class="fill-fragment-soft"></rect>
+          <text x="50" y="110" class="mono dg-td fill-ink" font-weight="600">VetCenter</text>
+          <text x="230" y="110" class="mono dg-td fill-ink">Vetsuisse (B540)</text>
+          <text x="340" y="110" class="mono dg-td fill-ink">Thieme Datenbank</text>
+
+          <!-- table 2 -->
+          <text x="40" y="192" class="mono dg-file-label">Stats-Lizenzen</text>
+          <rect x="40" y="198" width="420" height="56" fill="none" class="stroke-muted"></rect>
+          <text x="50" y="214" class="display dg-th">TITEL</text>
+          <text x="230" y="214" class="display dg-th">BIBLIOTHEK</text>
+          <text x="340" y="214" class="display dg-th">KATEGORIE</text>
+          <line x1="40" y1="220" x2="460" y2="220" class="stroke-muted"></line>
+          <rect x="40" y="220" width="420" height="34" class="fill-fragment-soft"></rect>
+          <text x="50" y="242" class="mono dg-td fill-ink" font-weight="600">VetCenter</text>
+          <text x="230" y="242" class="mono dg-td fill-ink">Medizin (B452)</text>
+          <text x="340" y="242" class="mono dg-td fill-ink">Apps &amp; DB</text>
+
+          <!-- table 3 -->
+          <text x="40" y="324" class="mono dg-file-label">Übersicht B452/B521/B540 Lizenzen</text>
+          <rect x="40" y="330" width="420" height="56" fill="none" class="stroke-muted"></rect>
+          <text x="50" y="346" class="display dg-th">TITEL</text>
+          <text x="230" y="346" class="display dg-th">LIEFERANT</text>
+          <text x="340" y="346" class="display dg-th">ABO-NR</text>
+          <line x1="40" y1="352" x2="460" y2="352" class="stroke-muted"></line>
+          <rect x="40" y="352" width="420" height="34" class="fill-fragment-soft"></rect>
+          <text x="50" y="374" class="mono dg-td fill-ink" font-weight="600">VetCenter</text>
+          <text x="230" y="374" class="mono dg-td fill-ink">Thieme</text>
+          <text x="340" y="374" class="mono dg-td fill-ink">Kundenr. 7367588</text>
+
+          <text x="40" y="410" class="display dg-note">Gleiches Medium — aber mit unter-</text>
+          <text x="40" y="426" class="display dg-note">schiedlicher Bibliothek je Tabelle.</text>
+
+          <!-- merge arrow -->
+          <path d="M 460 227 C 500 227, 500 116, 560 116" fill="none" class="stroke-accent" stroke-width="2" marker-end="url(#arrow-accent)"></path>
+          <text x="474" y="185" class="display dg-arrow-label fill-accent" transform="rotate(-70 474 185)">3× dupliziert → 1×</text>
+
+          <!-- RIGHT PANEL: proposal -->
+          <text x="850" y="34" text-anchor="middle" class="display dg-panel-label fill-accent">VORSCHLAG — verknüpftes Schema</text>
+
+          <!-- objekt -->
+          <rect x="620" y="60" width="260" height="100" rx="2" class="fill-surface stroke-ink"></rect>
+          <text x="636" y="80" class="display dg-title fill-ink">objekt</text>
+          <line x1="620" y1="88" x2="880" y2="88" class="stroke-muted"></line>
+          <text x="636" y="103" class="mono dg-attr fill-muted">titel, medientyp_id, verlag, issn</text>
+          <rect x="636" y="130" width="228" height="20" class="fill-accent-soft"></rect>
+          <text x="644" y="144" class="mono dg-attr fill-accent">„VetCenter" (Thieme)</text>
+
+          <!-- bibliothek -->
+          <rect x="940" y="60" width="180" height="64" rx="2" class="fill-surface stroke-ink"></rect>
+          <text x="954" y="80" class="display dg-title fill-ink">bibliothek</text>
+          <line x1="940" y1="88" x2="1120" y2="88" class="stroke-muted"></line>
+          <text x="954" y="104" class="mono dg-attr fill-muted">name, kürzel</text>
+
+          <!-- objekt_bibliothek -->
+          <rect x="620" y="230" width="260" height="90" rx="2" class="fill-surface stroke-ink"></rect>
+          <text x="636" y="250" class="display dg-title fill-ink">objekt_bibliothek</text>
+          <line x1="620" y1="258" x2="880" y2="258" class="stroke-muted"></line>
+          <text x="636" y="273" class="mono dg-attr fill-muted">objekt_id ↳FK, bibliothek_id ↳FK</text>
+          <text x="636" y="288" class="mono dg-attr fill-muted">herkunft, verwaltung</text>
+          <text x="636" y="306" class="display dg-note">VetCenter: 2 Zeilen (Vetsuisse + Medizin)</text>
+
+          <!-- verwaltung -->
+          <rect x="940" y="230" width="200" height="145" rx="2" class="fill-surface stroke-ink"></rect>
+          <text x="954" y="250" class="display dg-title fill-ink">verwaltung</text>
+          <line x1="940" y1="258" x2="1140" y2="258" class="stroke-muted"></line>
+          <text x="954" y="275" class="mono dg-attr fill-muted">objekt_id ↳FK, jahr</text>
+          <text x="954" y="293" class="mono dg-attr fill-muted">etat_code</text>
+          <text x="954" y="311" class="mono dg-attr fill-muted">bestellposten_alma</text>
+          <text x="954" y="329" class="mono dg-attr fill-muted">abo_nr</text>
+          <text x="954" y="352" class="display dg-note">z. B. Abo-Nr „Kundenr. 7367588"</text>
+
+          <!-- notiz -->
+          <rect x="620" y="450" width="260" height="90" rx="2" class="fill-surface stroke-ink"></rect>
+          <text x="636" y="470" class="display dg-title fill-ink">notiz</text>
+          <line x1="620" y1="478" x2="880" y2="478" class="stroke-muted"></line>
+          <text x="636" y="493" class="mono dg-attr fill-muted">objekt_id ↳FK, jahr, typ</text>
+          <text x="636" y="508" class="mono dg-attr fill-muted">text, quelle_datei</text>
+          <text x="636" y="526" class="display dg-note">z. B. „Thieme Datenbank"</text>
+
+          <!-- relationship arrows -->
+          <line x1="750" y1="160" x2="750" y2="230" class="stroke-ink" stroke-width="1.4" marker-end="url(#arrow-ink)"></line>
+          <text x="758" y="198" class="display dg-arrow-label fill-muted">1 → N</text>
+
+          <path d="M 1010 124 C 1010 165, 990 200, 970 230" fill="none" class="stroke-ink" stroke-width="1.4" marker-end="url(#arrow-ink)"></path>
+          <text x="972" y="185" class="display dg-arrow-label fill-muted">1 → N</text>
+
+          <path d="M 880 280 C 905 280, 915 280, 938 280" fill="none" class="stroke-ink" stroke-width="1.4" marker-end="url(#arrow-ink)"></path>
+          <text x="887" y="272" class="display dg-arrow-label fill-muted">1 → N</text>
+
+          <path d="M 700 330 C 700 380, 700 400, 700 450" fill="none" class="stroke-ink" stroke-width="1.4" marker-end="url(#arrow-ink)"></path>
+          <text x="708" y="405" class="display dg-arrow-label fill-muted">1 Objekt → N Notizen</text>
+        </svg>
+      </div>
+      <figcaption>Heute steht „VetCenter" dreimal isoliert in Dateien, die sich nicht gegenseitig kennen — inklusive widersprüchlicher Bibliotheksangabe. Im Vorschlag wird daraus ein Datensatz in <span class="mono">objekt</span>, verknüpft mit zwei <span class="mono">objekt_bibliothek</span>-Zeilen (je Bibliothek eine) und jahresgenauen <span class="mono">verwaltung</span>-Einträgen für Bestellposten und Abo-Nummer.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Die vollständige Struktur auf einen Blick</h2>
+    <p class="prose">Zwei Kerntabellen tragen die eigentliche Logik: <span class="mono">objekt</span> (Stammdaten, ein Datensatz pro Medium) und <span class="mono">fakt_kennzahl</span> (Fakten im bewährten Langformat). Alle übrigen sieben Tabellen hängen an <span class="mono">objekt</span> und lösen je eine Teilaufgabe: kontrollierte Zuordnung (Bibliothek, Medientyp, Kennzahl), jahresgenaue Verwaltung, unterscheidbare Kommentare, lückenlose Provenienz.</p>
+
+    <figure>
+      <div class="diagram-wrap">
+        <svg viewBox="0 0 1300 820" role="img" aria-label="Vollständiges Schema mit neun Tabellen: objekt ist der zentrale Knoten, verbunden mit medientyp, objekt_bibliothek, verwaltung, notiz und objekt_quelle; fakt_kennzahl hängt an objekt und an kennzahl_katalog; objekt_bibliothek und verwaltung verbinden zusätzlich zu bibliothek.">
+          <defs>
+            <marker id="arrow-ink2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" class="fill-muted"></path>
+            </marker>
+          </defs>
+
+          <text x="650" y="26" text-anchor="middle" class="display dg-panel-label fill-accent">9 TABELLEN — OBJEKT UND FAKT_KENNZAHL ALS KERN</text>
+
+          <!-- medientyp -->
+          <rect x="100" y="60" width="280" height="70" rx="2" class="fill-surface stroke-ink"></rect>
+          <text x="116" y="80" class="display dg-title fill-ink">medientyp</text>
+          <line x1="100" y1="88" x2="380" y2="88" class="stroke-muted"></line>
+          <text x="116" y="103" class="mono dg-attr fill-accent">medientyp_id · PK</text>
+          <text x="116" y="118" class="mono dg-attr fill-muted">name</text>
+
+          <!-- objekt (hub) -->
+          <rect x="460" y="60" width="300" height="140" rx="2" class="fill-surface stroke-accent" stroke-width="1.6"></rect>
+          <text x="476" y="80" class="display dg-title fill-accent">objekt</text>
+          <line x1="460" y1="88" x2="760" y2="88" class="stroke-muted"></line>
+          <text x="476" y="103" class="mono dg-attr fill-accent">objekt_id · PK</text>
+          <text x="476" y="118" class="mono dg-attr fill-muted">titel</text>
+          <text x="476" y="133" class="mono dg-attr fill-muted">medientyp_id ↳FK</text>
+          <text x="476" y="148" class="mono dg-attr fill-muted">fachgebiet, issn</text>
+          <text x="476" y="163" class="mono dg-attr fill-muted">paket_gruppe, status</text>
+          <text x="476" y="178" class="mono dg-attr fill-muted">lieferant, verlag</text>
+
+          <!-- bibliothek -->
+          <rect x="900" y="60" width="280" height="70" rx="2" class="fill-surface stroke-ink"></rect>
+          <text x="916" y="80" class="display dg-title fill-ink">bibliothek</text>
+          <line x1="900" y1="88" x2="1180" y2="88" class="stroke-muted"></line>
+          <text x="916" y="103" class="mono dg-attr fill-accent">bibliothek_id · PK</text>
+          <text x="916" y="118" class="mono dg-attr fill-muted">name, kürzel</text>
+
+          <!-- notiz -->
+          <rect x="100" y="280" width="280" height="120" rx="2" class="fill-surface stroke-ink"></rect>
+          <text x="116" y="300" class="display dg-title fill-ink">notiz</text>
+          <line x1="100" y1="308" x2="380" y2="308" class="stroke-muted"></line>
+          <text x="116" y="323" class="mono dg-attr fill-accent">notiz_id · PK</text>
+          <text x="116" y="338" class="mono dg-attr fill-muted">objekt_id ↳FK</text>
+          <text x="116" y="353" class="mono dg-attr fill-muted">jahr</text>
+          <text x="116" y="368" class="mono dg-attr fill-muted">typ</text>
+          <text x="116" y="383" class="mono dg-attr fill-muted">text, quelle_datei</text>
+
+          <!-- objekt_bibliothek -->
+          <rect x="900" y="220" width="280" height="100" rx="2" class="fill-surface stroke-ink"></rect>
+          <text x="916" y="240" class="display dg-title fill-ink">objekt_bibliothek</text>
+          <line x1="900" y1="248" x2="1180" y2="248" class="stroke-muted"></line>
+          <text x="916" y="263" class="mono dg-attr fill-muted">objekt_id ↳FK</text>
+          <text x="916" y="278" class="mono dg-attr fill-muted">bibliothek_id ↳FK</text>
+          <text x="916" y="293" class="mono dg-attr fill-muted">herkunft</text>
+          <text x="916" y="308" class="mono dg-attr fill-muted">verwaltung (Text, z. B. SZZS)</text>
+
+          <!-- objekt_quelle -->
+          <rect x="100" y="480" width="280" height="100" rx="2" class="fill-surface stroke-ink"></rect>
+          <text x="116" y="500" class="display dg-title fill-ink">objekt_quelle</text>
+          <line x1="100" y1="508" x2="380" y2="508" class="stroke-muted"></line>
+          <text x="116" y="523" class="mono dg-attr fill-muted">objekt_id ↳FK</text>
+          <text x="116" y="538" class="mono dg-attr fill-muted">quelle_datei</text>
+          <text x="116" y="553" class="mono dg-attr fill-muted">quelle_blatt</text>
+          <text x="116" y="568" class="mono dg-attr fill-muted">original_titel</text>
+
+          <!-- fakt_kennzahl (core) -->
+          <rect x="460" y="480" width="300" height="150" rx="2" class="fill-surface stroke-accent" stroke-width="1.6"></rect>
+          <text x="476" y="500" class="display dg-title fill-accent">fakt_kennzahl</text>
+          <line x1="460" y1="508" x2="760" y2="508" class="stroke-muted"></line>
+          <text x="476" y="523" class="mono dg-attr fill-accent">fakt_id · PK</text>
+          <text x="476" y="538" class="mono dg-attr fill-muted">objekt_id ↳FK</text>
+          <text x="476" y="553" class="mono dg-attr fill-muted">jahr</text>
+          <text x="476" y="568" class="mono dg-attr fill-muted">kennzahl_id ↳FK</text>
+          <text x="476" y="583" class="mono dg-attr fill-muted">wert, wert_typ, waehrung</text>
+          <text x="476" y="598" class="mono dg-attr fill-muted">quelle_datei, quelle_blatt</text>
+
+          <!-- verwaltung -->
+          <rect x="900" y="420" width="280" height="150" rx="2" class="fill-surface stroke-ink"></rect>
+          <text x="916" y="440" class="display dg-title fill-ink">verwaltung</text>
+          <line x1="900" y1="448" x2="1180" y2="448" class="stroke-muted"></line>
+          <text x="916" y="463" class="mono dg-attr fill-accent">verwaltung_id · PK</text>
+          <text x="916" y="478" class="mono dg-attr fill-muted">objekt_id ↳FK, bibliothek_id ↳FK</text>
+          <text x="916" y="493" class="mono dg-attr fill-muted">jahr</text>
+          <text x="916" y="508" class="mono dg-attr fill-muted">etat_code, bestellposten_alma</text>
+          <text x="916" y="523" class="mono dg-attr fill-muted">erwerbungsart, abo_nr</text>
+          <text x="916" y="538" class="mono dg-attr fill-muted">sachkonto, bezugsart, ref_nr</text>
+
+          <!-- kennzahl_katalog -->
+          <rect x="900" y="650" width="280" height="90" rx="2" class="fill-surface stroke-ink"></rect>
+          <text x="916" y="670" class="display dg-title fill-ink">kennzahl_katalog</text>
+          <line x1="900" y1="678" x2="1180" y2="678" class="stroke-muted"></line>
+          <text x="916" y="693" class="mono dg-attr fill-accent">kennzahl_id · PK</text>
+          <text x="916" y="708" class="mono dg-attr fill-muted">name, kategorie, beschreibung</text>
+
+          <!-- ARROWS -->
+          <!-- medientyp -> objekt -->
+          <line x1="380" y1="95" x2="460" y2="95" class="stroke-ink" stroke-width="1.4" marker-end="url(#arrow-ink2)"></line>
+          <text x="392" y="88" class="display dg-arrow-label fill-muted">1 → N</text>
+
+          <!-- objekt -> objekt_bibliothek -->
+          <path d="M 760 115 C 830 130, 860 180, 900 235" fill="none" class="stroke-ink" stroke-width="1.4" marker-end="url(#arrow-ink2)"></path>
+          <text x="775" y="170" class="display dg-arrow-label fill-muted">1 → N</text>
+
+          <!-- bibliothek -> objekt_bibliothek -->
+          <line x1="1040" y1="130" x2="1040" y2="220" class="stroke-ink" stroke-width="1.4" marker-end="url(#arrow-ink2)"></line>
+          <text x="1048" y="178" class="display dg-arrow-label fill-muted">1 → N</text>
+
+          <!-- objekt -> verwaltung -->
+          <path d="M 760 160 C 850 200, 880 300, 900 440" fill="none" class="stroke-ink" stroke-width="1.4" marker-end="url(#arrow-ink2)"></path>
+          <text x="775" y="290" class="display dg-arrow-label fill-muted">1 → N</text>
+
+          <!-- bibliothek -> verwaltung (long curve on right margin) -->
+          <path d="M 1180 100 C 1250 220, 1250 350, 1180 445" fill="none" class="stroke-ink" stroke-width="1.4" marker-end="url(#arrow-ink2)"></path>
+          <text x="1200" y="280" class="display dg-arrow-label fill-muted" transform="rotate(90 1200 280)">1 → N</text>
+
+          <!-- objekt -> fakt_kennzahl -->
+          <line x1="610" y1="200" x2="610" y2="480" class="stroke-accent" stroke-width="1.8" marker-end="url(#arrow-ink2)"></line>
+          <text x="620" y="345" class="display dg-arrow-label fill-accent">1 Objekt → N Fakten</text>
+
+          <!-- kennzahl_katalog -> fakt_kennzahl -->
+          <path d="M 900 685 C 830 660, 800 630, 760 600" fill="none" class="stroke-ink" stroke-width="1.4" marker-end="url(#arrow-ink2)"></path>
+          <text x="785" y="660" class="display dg-arrow-label fill-muted">welche Kennzahl</text>
+
+          <!-- objekt -> notiz -->
+          <path d="M 460 130 C 350 200, 280 240, 240 280" fill="none" class="stroke-ink" stroke-width="1.4" marker-end="url(#arrow-ink2)"></path>
+          <text x="290" y="220" class="display dg-arrow-label fill-muted">1 → N</text>
+
+          <!-- objekt -> objekt_quelle -->
+          <path d="M 460 175 C 320 280, 260 380, 240 480" fill="none" class="stroke-ink" stroke-width="1.4" marker-end="url(#arrow-ink2)"></path>
+          <text x="290" y="420" class="display dg-arrow-label fill-muted">1 → N</text>
+        </svg>
+      </div>
+      <figcaption><span class="mono">PK</span> = Primärschlüssel, <span class="mono">↳FK</span> = Fremdschlüssel auf die jeweils benannte Tabelle. <span class="mono">objekt</span> und <span class="mono">fakt_kennzahl</span> (Akzentfarbe) bilden die zwei Ebenen aus dem Kernprinzip — Stammdaten und Fakten; die restlichen sieben Tabellen sind kontrollierte Zuordnung, jahresgenaue Verwaltung und Provenienz.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Die neun Tabellen im Einzelnen</h2>
+    <p class="prose">Zwei Kerntabellen (Akzentfarbe), fünf Zuordnungs-/Nachschlagetabellen, zwei Satelliten für Kommentare und Herkunftsnachweis.</p>
+
+    <div class="catalog-grid">
+      <div class="catalog-card core">
+        <div class="role">Kern</div>
+        <div class="name">objekt</div>
+        <div class="purpose">Stammdaten, ein Datensatz pro eindeutigem Medium — unabhängig von Ursprungsdatei oder verwaltender Bibliothek.</div>
+        <div class="cols"><span>titel</span><span>medientyp_id</span><span>fachgebiet</span><span>issn</span><span>paket_gruppe</span><span>status</span></div>
+      </div>
+
+      <div class="catalog-card core">
+        <div class="role">Kern</div>
+        <div class="name">fakt_kennzahl</div>
+        <div class="purpose">Das Herzstück: dieselbe Langformat-Logik wie heute, aber über alle Objekte hinweg in einer Tabelle statt 16-fach dupliziert.</div>
+        <div class="cols"><span>objekt_id</span><span>jahr</span><span>kennzahl_id</span><span>wert</span><span>wert_typ</span><span>quelle_datei</span></div>
+      </div>
+
+      <div class="catalog-card">
+        <div class="role">Nachschlagetabelle</div>
+        <div class="name">bibliothek</div>
+        <div class="purpose">Die 7 Bibliotheken (Medizin B452, Vetsuisse B540, Zahnmedizin B521, Pflanzenwissenschaften B552, Geographie B467, Exakte Wissenschaften E30, Muesmatt B554) — verifiziert gegen die tatsächlichen Werte in Stats_lang.db.</div>
+        <div class="cols"><span>name</span><span>kürzel</span></div>
+      </div>
+
+      <div class="catalog-card">
+        <div class="role">Nachschlagetabelle</div>
+        <div class="name">medientyp</div>
+        <div class="purpose">Datenbank, E-Book-Paket, E-Journal-Einzeltitel, E-Journal-Paket, Zeitschriften-Abo, Lizenzpaket-Produkt.</div>
+        <div class="cols"><span>name</span></div>
+      </div>
+
+      <div class="catalog-card">
+        <div class="role">Zuordnung</div>
+        <div class="name">objekt_bibliothek</div>
+        <div class="purpose">M:N-Verknüpfung — ein Objekt kann zu mehreren Bibliotheken gehören, wie VetCenter (Vetsuisse + Medizin). Löst die Verzettelung strukturell auf.</div>
+        <div class="cols"><span>objekt_id</span><span>bibliothek_id</span><span>herkunft</span><span>verwaltung</span></div>
+      </div>
+
+      <div class="catalog-card">
+        <div class="role">Zuordnung, pro Jahr</div>
+        <div class="name">verwaltung</div>
+        <div class="purpose">Bestellabwicklung, die pro Bibliothek und Jahr variieren kann — bewusst getrennt von objekt_bibliothek, weil Etat Code und Bestellposten sich oft jährlich ändern.</div>
+        <div class="cols"><span>objekt_id</span><span>bibliothek_id</span><span>jahr</span><span>etat_code</span><span>bestellposten_alma</span><span>abo_nr</span></div>
+      </div>
+
+      <div class="catalog-card">
+        <div class="role">Nachschlagetabelle</div>
+        <div class="name">kennzahl_katalog</div>
+        <div class="purpose">Führt alle bisherigen Kennzahl-Schreibweisen (CPU, CPU CHF, CPU O, TIR, UIR, Grand Total Usage …) auf kontrollierte Einträge zurück.</div>
+        <div class="cols"><span>name</span><span>kategorie</span><span>beschreibung</span></div>
+      </div>
+
+      <div class="catalog-card">
+        <div class="role">Satellit</div>
+        <div class="name">notiz</div>
+        <div class="purpose">Freitext bleibt getrennt von den Zahlen, da unterschiedliche Lebenszyklen: Zahlen sind stabil, Notizen werden laufend ergänzt. Mit Typ-Unterscheidung statt vieler Freitextspalten.</div>
+        <div class="cols"><span>objekt_id</span><span>jahr</span><span>typ</span><span>text</span></div>
+      </div>
+
+      <div class="catalog-card">
+        <div class="role">Audit</div>
+        <div class="name">objekt_quelle</div>
+        <div class="purpose">Herkunftsnachweis: aus welcher Datei/welchem Blatt ein Objekt zusammengeführt wurde, inkl. ursprünglicher Schreibweise. Macht jeden Merge nachvollziehbar und rückgängig machbar.</div>
+        <div class="cols"><span>objekt_id</span><span>quelle_datei</span><span>original_titel</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="callout">
+      <h3>Was für die Migration zu beachten ist</h3>
+      <ol class="prose">
+        <li>Die bisherige Übertragung war eine reine Formkonvertierung — 1:1, verifizierbar. Diese Normalisierung erfordert zusätzlich eine <strong>inhaltliche Zuordnung</strong>: welche Zeilen in welchen Tabellen dasselbe Medium meinen. Kein automatischer Merge — Fuzzy-Match als Vorschlag, jeder Kandidat wird einzeln zur Bestätigung vorgelegt.</li>
+        <li><strong>Ein Beispiel aus dem Projekt-Vorschlag korrigiert:</strong> „E-Book-Pakete NAT" und „Nutzungsstatistiken EBook-Pakete NAT" wurden dort als Beleg für riskantes Titel-Matching genannt. Der Abgleich zeigt aber: 10 von 25 bzw. 19 Titeln überlappen exakt, und das Datenglossar selbst hält „identische Titel-Menge" fest — die beiden Dateien unterscheiden sich in der Datenart (Preise vs. Nutzung), nicht in den Objekten. Dieses Paar ist also ein Kandidat <em>für</em> den Merge, nicht dagegen.</li>
+        <li><strong>Ein konkreter Bug, kein hypothetisches Risiko:</strong> <span class="mono">wert</span> in <span class="mono">fakt_kennzahl</span> muss neben Zahlen auch Kategorien wie „10000-50000" aufnehmen und ist deshalb TEXT. Wird ein Python-Float roh eingefügt, rundet SQLites TEXT-Affinität automatisch auf ~15 signifikante Stellen. Ist mir beim Bau von Stats_lang.db bei rund 1'400 Zellen passiert. Lösung: Zahl vor dem Insert selbst als Text mit vollem Repr formatieren, nicht auf die Spaltentyp-Deklaration verlassen.</li>
+        <li>ISSN ist als Schlüssel zuverlässiger als Titel, existiert aber nur für Zeitschriften — nicht für Datenbanken oder E-Book-Pakete. Die bereits gebaute Fuzzy-Suche liefert einen guten Kandidaten-Abgleich; die fachliche Bestätigung bei geteilten Lizenzen wie VetCenter bleibt Handarbeit.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>Kurzeinführung: Wie die Tabellen zusammenspielen</h2>
+    <p class="prose">Zum Zeigen im Team, ohne SQL-Vorwissen vorauszusetzen: Jede Tabelle ist eine Liste von Zeilen mit denselben Spalten — <span class="mono">objekt</span> die Liste aller Medien, <span class="mono">fakt_kennzahl</span> die Liste aller Jahres-/Kennzahl-Werte. Jede Zeile in <span class="mono">objekt</span> hat eine eindeutige Nummer, den <strong>Primärschlüssel</strong> <span class="mono">objekt_id</span>. Andere Tabellen verweisen darauf über eine Spalte gleichen Namens, den <strong>Fremdschlüssel</strong> — statt den Titel jedes Mal neu abzutippen. Genau das verhindert die Tippvarianten, die heute zur Verzettelung führen.</p>
+
+    <p class="prose">Ein <strong>JOIN</strong> heisst nichts anderes als: „verbinde zwei Tabellen über eine gemeinsame ID-Spalte". Um alles zu VetCenter zu sehen — welche Bibliotheken es nutzen, was es kostet, wie oft es genutzt wird — braucht es keine drei Dateien mehr von Hand zusammenzusuchen, sondern eine einzige Abfrage:</p>
+
+    <div class="code-block">
+<pre><code><span class="kw">SELECT</span> b.name <span class="kw">AS</span> bibliothek, f.jahr, k.name <span class="kw">AS</span> kennzahl, f.wert, f.waehrung
+<span class="kw">FROM</span> objekt o
+<span class="kw">JOIN</span> objekt_bibliothek ob <span class="kw">ON</span> ob.objekt_id = o.objekt_id
+<span class="kw">JOIN</span> bibliothek b       <span class="kw">ON</span> b.bibliothek_id = ob.bibliothek_id
+<span class="kw">JOIN</span> fakt_kennzahl f    <span class="kw">ON</span> f.objekt_id = o.objekt_id
+<span class="kw">JOIN</span> kennzahl_katalog k <span class="kw">ON</span> k.kennzahl_id = f.kennzahl_id
+<span class="kw">WHERE</span> o.titel = <span class="cm">'VetCenter'</span>
+<span class="kw">ORDER BY</span> b.name, f.jahr;</code></pre>
+    </div>
+
+    <p class="prose">Zeile für Zeile gelesen:</p>
+    <ol class="steps prose">
+      <li><span class="mono">FROM objekt o</span> — starte bei der einen Zeile „VetCenter" in der Stammdaten-Tabelle.</li>
+      <li><span class="mono">JOIN objekt_bibliothek … ON objekt_id</span> — finde alle Zeilen dort, die auf diese objekt_id verweisen (bei VetCenter: 2, eine pro Bibliothek).</li>
+      <li><span class="mono">JOIN bibliothek … ON bibliothek_id</span> — übersetze die Bibliotheks-ID in den lesbaren Namen („Vetsuisse (B540)", „Medizin (B452)").</li>
+      <li><span class="mono">JOIN fakt_kennzahl … ON objekt_id</span> — hole dazu alle Jahres-/Kennzahl-Werte, die zu derselben objekt_id gehören.</li>
+      <li><span class="mono">JOIN kennzahl_katalog … ON kennzahl_id</span> — übersetze die Kennzahl-ID in den lesbaren Namen (z. B. „CPU CHF" statt einer Zahl).</li>
+      <li><span class="mono">WHERE o.titel = 'VetCenter'</span> — grenze das Ganze auf genau dieses eine Medium ein.</li>
+    </ol>
+    <p class="prose">Das Ergebnis ist eine einzige Tabelle mit allen Nutzungs- und Kostenzahlen von VetCenter, über beide Bibliotheken und alle Jahre hinweg. <span class="mono">JOIN</span> ist dabei immer dasselbe Muster: zwei Tabellen über eine ID-Spalte verbinden, die in beiden vorkommt — je mehr Tabellen die Frage betrifft, desto mehr <span class="mono">JOIN</span>-Zeilen, aber das Prinzip bleibt gleich.</p>
+  </section>
+
+  <footer class="closing">
+    Dies ist weiterhin ein Vorschlag zur Diskussion. Empfohlener erster Schritt (wie im Projekt-Vorschlag): testweise Fuzzy-Match + Merge für ein überschaubares, bekanntermassen überlappendes Paar wie „Datenbanken NAT" / „Nutzungsstatistiken Datenbanken NAT" durchspielen, Ergebnis gemeinsam prüfen, erst danach auf alle 16 Tabellen ausweiten.
+  </footer>
+
+</div>
+
+</body></html>

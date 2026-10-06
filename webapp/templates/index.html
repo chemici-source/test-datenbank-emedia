@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Übersicht{% endblock %}
+{% block content %}
+  <div class="topbar">
+    <div>
+      <h2>Übersicht</h2>
+      <div class="sub">Nutzungsstatistiken &amp; Lizenzstatus von E-Books, E-Journals und Datenbanken</div>
+    </div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="value">{{ total_tables }}</div>
+      <div class="label">Tabellen</div>
+    </div>
+    <div class="stat-card">
+      <div class="value">{{ "{:,}".format(total_rows).replace(",", "'") }}</div>
+      <div class="label">Datensätze gesamt</div>
+    </div>
+  </div>
+
+  <div class="card-grid">
+    {% for t in tables %}
+    <a class="table-card" href="{{ url_for('table_view', table=t.name) }}">
+      <div class="name">{{ t.label }}</div>
+      <div class="meta">
+        <span><b>{{ t.rows }}</b> Zeilen</span>
+        <span><b>{{ t.cols }}</b> Spalten</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+  <footer class="note">Quelle: Stats_lang.db &middot; ein Datensatz pro Objekt/Jahr/Kennzahl je Tabelle</footer>
+{% endblock %}

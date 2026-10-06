@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% block title %}{{ label }}{% endblock %}
+
+{% macro qs(overrides) -%}
+  {%- set params = request.args.to_dict() -%}
+  {%- for k, v in overrides.items() -%}
+    {%- if v is none -%}
+      {%- if params.pop(k, none) -%}{%- endif -%}
+    {%- else -%}
+      {%- set _ = params.update({k: v}) -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {{ params|urlencode }}
+{%- endmacro %}
+
+{% block content %}
+  <div class="topbar">
+    <div>
+      <h2>{{ label }}</h2>
+      <div class="sub">{{ "{:,}".format(total).replace(",", "'") }} Datensätze{% if q or active_filters %} (gefiltert){% endif %}</div>
+    </div>
+  </div>
+
+  <form class="filter-bar" method="get">
+    <input type="text" name="q" placeholder="Suche über alle Spalten…" value="{{ q }}">
+    {% for fc in filter_col_candidates %}
+      <select name="{{ fc }}">
+        <option value="">{{ fc }} (alle)</option>
+        {% for opt in filter_options[fc] %}
+          <option value="{{ opt }}" {{ "selected" if active_filters.get(fc) == opt|string else "" }}>{{ opt }}</option>
+        {% endfor %}
+      </select>
+    {% endfor %}
+    <button type="submit">Filtern</button>
+    {% if q or active_filters %}
+      <a class="reset" href="{{ url_for('table_view', table=table) }}" style="text-decoration:none; padding:0.48rem 1rem; border-radius:7px; font-size:0.85rem;">Zurücksetzen</a>
+    {% endif %}
+  </form>
+
+  {% if q and suggestion_query %}
+    <div class="search-hint">
+      Meinten Sie <a href="?{{ qs({'q': suggestion_query, 'page': none}) }}">„{{ suggestion_query }}“</a>?
+      Aktuell wird nach „{{ q }}“ gesucht{% if used_fuzzy %} (inkl. unscharfer Treffer){% endif %}.
+    </div>
+  {% elif q and used_fuzzy %}
+    <div class="search-hint">Enthält auch unscharfe Treffer mit abweichender Schreibweise zu „{{ q }}“.</div>
+  {% endif %}
+
+  {% if rows %}
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr>
+          {% for col in columns %}
+            {% set is_sorted = (sort == col) %}
+            {% set next_dir = 'desc' if (is_sorted and direction == 'asc') else 'asc' %}
+            <th>
+              <a href="?{{ qs({'sort': col, 'dir': next_dir, 'page': none}) }}">
+                {{ col }}
+                {% if is_sorted %}{{ '▲' if direction == 'asc' else '▼' }}{% endif %}
+              </a>
+            </th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          {% for col in columns %}
+            {% set val = row[col] %}
+            <td class="{{ 'numeric' if col in ('Jahr', 'Wert') else '' }} {{ 'empty' if val is none or val == '' else '' }}"
+                title="{{ val if val is not none else '' }}">
+              {% if val is none or val == '' %}
+                &ndash;
+              {% elif col == 'Kennzahl' or col == 'Wert-Typ' %}
+                <span class="pill">{{ val }}</span>
+              {% else %}
+                {% if loop.first and q and row['_score'] < 0.999 %}<span class="fuzzy-mark" title="unscharfer Treffer">≈</span>{% endif %}{{ val }}
+              {% endif %}
+            </td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pagination">
+    <div>Seite {{ page }} von {{ total_pages }}</div>
+    <div class="pages">
+      {% if page > 1 %}
+        <a href="?{{ qs({'page': 1}) }}">&laquo; Erste</a>
+        <a href="?{{ qs({'page': page - 1}) }}">&lsaquo; Zurück</a>
+      {% endif %}
+      <span class="current">{{ page }}</span>
+      {% if page < total_pages %}
+        <a href="?{{ qs({'page': page + 1}) }}">Weiter &rsaquo;</a>
+        <a href="?{{ qs({'page': total_pages}) }}">Letzte &raquo;</a>
+      {% endif %}
+    </div>
+  </div>
+  {% else %}
+  <div class="table-wrap">
+    <div class="empty-state">
+      Keine Datensätze für diese Filter gefunden.
+      {% if q and suggestion_query %}<br>Meinten Sie <a href="?{{ qs({'q': suggestion_query, 'page': none}) }}">„{{ suggestion_query }}“</a>?{% endif %}
+    </div>
+  </div>
+  {% endif %}
+{% endblock %}
