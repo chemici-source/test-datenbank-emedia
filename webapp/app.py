@@ -6,7 +6,7 @@ from difflib import SequenceMatcher, get_close_matches
 from flask import Flask, render_template, request, abort, g
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DB_PATH = os.path.join(BASE_DIR, "..", "Stats_lang.db")
+DB_PATH = os.path.join(BASE_DIR, "Stats_lang.db")
 PER_PAGE = 50
 
 WORD_RE = re.compile(r"\w+", re.UNICODE)
